@@ -2,12 +2,19 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 :root{
-    
+    --gray-1: #F2F2F2;
+    --gray-2: #E6E6E6;
+    --gray-3: #D8D8D8;
+    --blue-1: #5B82D0;
+    --blue-2: #5E87DB;
+    --black-1: #585858;
+    --black-2: #6E6E6E;
 }
 
 *{
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -16,5 +23,13 @@ export default createGlobalStyle`
 
 button{
     cursor: pointer;
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
 }
 `;
