@@ -18,7 +18,7 @@ export const DashboardContainer = styled.div`
   }
 `;
 
-export const ContentLeft = styled.div`
+export const DivForm = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -28,7 +28,7 @@ export const ContentLeft = styled.div`
 
   @media (min-width: 550px) {
     padding: 30px;
-    width: 60%;
+    width: 55%;
   }
 
   h1 {
@@ -37,36 +37,9 @@ export const ContentLeft = styled.div`
     font-weight: bold;
     text-align: center;
   }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  input {
-    border: 1px solid black;
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid var(--gray-3);
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
-
-  .span-info {
-    color: var(--black-2);
-    font-size: 0.8rem;
-  }
 `;
 
-export const ContentRight = styled.div`
+export const DivResult = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -76,7 +49,7 @@ export const ContentRight = styled.div`
 
   @media (min-width: 550px) {
     padding: 60px 30px 30px;
-    width: 40%;
+    width: 45%;
   }
 
   h2 {
@@ -87,12 +60,15 @@ export const ContentRight = styled.div`
     width: 100%;
     max-width: 300px;
     padding-bottom: 5px;
+    max-width: 300px;
   }
 
   ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
+    max-width: 300px;
 
     @media (min-width: 550px) {
       width: 100%;
