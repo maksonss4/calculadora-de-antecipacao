@@ -75,14 +75,10 @@ export function AppProvider({ children }: IChildren) {
       days: [e.value],
     };
 
-    console.log("valueSpecifcDay", valueSpecificDay);
-    console.log("data", data);
-
     data.days[0] &&
       api
         .post("", data)
         .then((res) => {
-          console.log(res);
           const result: number = Object.values(res.data)[0] as number;
           setValueSpecificDay(result);
         })

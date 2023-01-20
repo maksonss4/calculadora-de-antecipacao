@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { InputNumber } from "primereact/inputnumber";
 
 export const DivContainer = styled.div`
   padding: 0 1rem;
