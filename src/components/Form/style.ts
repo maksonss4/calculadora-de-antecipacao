@@ -3,22 +3,22 @@ import styled from "styled-components";
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.938rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 18.75rem;
 
   input {
-    border: 1px solid black;
+    border: 0.063rem solid black;
     width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid var(--gray-3);
+    padding: 0.313rem;
+    border-radius: 0.313rem;
+    border: 0.063rem solid var(--gray-3);
   }
 
   div {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 0.188rem;
   }
 
   .span-info {
@@ -27,10 +27,10 @@ export const FormContainer = styled.form`
   }
 
   button {
-    padding: 5px 0;
-    border: 1px solid var(--blue-1);
-    border-radius: 5px;
-    color: white;
+    padding: 0.313rem 0;
+    border: 0.063rem solid var(--blue-1);
+    border-radius: 0.313rem;
+    color: var(--white-1);
     font-weight: bold;
     background-color: var(--blue-1);
 

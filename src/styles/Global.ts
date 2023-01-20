@@ -3,6 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default createGlobalStyle`
 :root{
+    --white-1: #FFFFFF;
     --gray-1: #F2F2F2;
     --gray-2: #E6E6E6;
     --gray-3: #D8D8D8;
@@ -21,6 +22,7 @@ export default createGlobalStyle`
     text-decoration: none;
     list-style: none;
     font: unset;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 button{

@@ -10,13 +10,13 @@ export const DashboardContainer = styled.div`
   max-width: 45rem;
   width: 100%;
   position: relative;
-  border: 2px solid var(--gray-2);
-  border-radius: 5px;
+  border: 0.125rem solid var(--gray-2);
+  border-radius: 0.313rem;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 
-  @media (min-width: 550px) {
+  @media (min-width: 34.375rem) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -28,10 +28,10 @@ export const DivForm = styled.div`
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  padding: 30px 10px 20px;
+  padding: 1.8rem 0.625rem 1.25rem;
 
-  @media (min-width: 550px) {
-    padding: 30px;
+  @media (min-width: 34.375rem) {
+    padding: 1.875rem;
     width: 55%;
   }
 
@@ -48,11 +48,11 @@ export const DivResult = styled.div`
   flex-direction: column;
   gap: 1rem;
   background-color: var(--gray-1);
-  padding: 20px 10px;
+  padding: 1.25rem 0.625rem;
   align-items: center;
 
-  @media (min-width: 550px) {
-    padding: 60px 30px 30px;
+  @media (min-width: 34.375rem) {
+    padding: 3.75rem 1.875rem 1.875rem;
     width: 45%;
   }
 
@@ -60,24 +60,24 @@ export const DivResult = styled.div`
     font-size: 1rem;
     color: var(--blue-1);
     font-weight: 700;
-    border-bottom: 1px solid var(--blue-1);
+    border-bottom: 0.063rem solid var(--blue-1);
     width: 100%;
-    max-width: 300px;
-    padding-bottom: 5px;
-    max-width: 300px;
+    max-width: 18.75rem;
+    padding-bottom: 0.313rem;
+    max-width: 18.75rem;
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
-    max-width: 300px;
+    max-width: 18.75rem;
 
-    @media (min-width: 550px) {
+    @media (min-width: 34.375rem) {
       width: 100%;
-      gap: 30px;
-      padding-top: 15px;
+      gap: 1.875rem;
+      padding-top: 1rem;
     }
   }
 `;
@@ -85,13 +85,9 @@ export const DivResult = styled.div`
 export const ButtonLeave = styled.button`
   display: flex;
   position: absolute;
-  right: 5px;
-  top: 5px;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 2px;
-`;
-
-export const InputMoney = styled(InputNumber)`
-  border: 1px solid black;
+  right: 0.313rem;
+  top: 0.313rem;
+  border: 0.063rem solid black;
+  border-radius: 0.313rem;
+  padding: 0.125rem;
 `;

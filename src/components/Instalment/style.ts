@@ -15,8 +15,8 @@ export const Li = styled.li`
 
   input {
     width: 3rem;
-    border: 2px solid var(--gray-3);
-    border-radius: 5px;
-    padding: 0 5px;
+    border: 0.125rem solid var(--gray-3);
+    border-radius: 0.313rem;
+    padding: 0 0.313rem;
   }
 `;

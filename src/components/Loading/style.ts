@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const DivLoading = styled.div`
-  width: 20px;
-  height: 20px;
-  border-bottom: 2px solid var(--green-1);
-  border-top: 2px solid var(--green-1);
-  border-right: 2px solid var(--green-1);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-bottom: 0.125rem solid var(--green-1);
+  border-top: 0.125rem solid var(--green-1);
+  border-right: 0.125rem solid var(--green-1);
   border-radius: 100%;
   animation: rotatee 1s linear infinite;
 

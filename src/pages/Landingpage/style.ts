@@ -39,7 +39,7 @@ export const LandingPageContainer = styled.div`
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
   }
 
   .box-2 {
@@ -47,23 +47,23 @@ export const LandingPageContainer = styled.div`
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
   }
 
   a {
-    border: 1px solid var(--blue-1);
-    border-radius: 5px;
-    padding: 5px;
+    border: 0.063rem solid var(--blue-1);
+    border-radius: 0.313rem;
+    padding: 0.313rem;
     text-align: center;
     font-weight: bold;
     color: var(--blue-1);
-    max-width: 300px;
+    max-width: 18.75rem;
     width: 100%;
     margin: 0 auto;
 
     :hover {
       transition: 0.7s;
-      background-color: white;
+      background-color: var(--white-1);
     }
   }
 `;

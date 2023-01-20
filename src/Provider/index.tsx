@@ -33,7 +33,10 @@ export function AppProvider({ children }: IChildren) {
         })
         .catch((err) => {
           setLoading(false);
-          err.response.status === 500 && toast.error("Erro do servidor");
+          err.code === "ERR_NETWORK" && toast.info("Você está offline");
+          err?.response?.status === 408 &&
+            toast.info("Conexão com servidor encerrada");
+          err?.response?.status === 500 && toast.error("Erro do servidor");
         });
   }, [mdr, installments, amount, setValueSpecificDay, day]);
 
@@ -55,7 +58,10 @@ export function AppProvider({ children }: IChildren) {
       })
       .catch((err) => {
         setLoading(false);
-        err.response.status === 500 && toast.error("Erro do servidor");
+        err.code === "ERR_NETWORK" && toast.info("Você está offline");
+        err?.response?.status === 408 &&
+          toast.info("Conexão com servidor encerrada");
+        err?.response?.status === 500 && toast.error("Erro do servidor");
       });
   }
 
@@ -81,11 +87,11 @@ export function AppProvider({ children }: IChildren) {
           setValueSpecificDay(result);
         })
         .catch((err) => {
-          console.log("err", err);
-          console.log("data 2", data);
-          console.log("valueSpecifcDay2", valueSpecificDay);
-          // setLoading(false);
-          // err.response.status === 500 && toast.error("Erro do servidor");
+          setLoading(false);
+          err.code === "ERR_NETWORK" && toast.info("Você está offline");
+          err?.response?.status === 408 &&
+            toast.info("Conexão com servidor encerrada");
+          err?.response?.status === 500 && toast.error("Erro do servidor");
         });
   }
 
