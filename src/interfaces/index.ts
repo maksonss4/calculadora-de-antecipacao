@@ -38,4 +38,5 @@ export interface IAppContext {
   setResult: (obj: IResponse) => void;
   onSubmit: (e: FormEvent) => void;
   getDay: (e: InputNumberChangeParams) => void;
+  loading: boolean;
 }

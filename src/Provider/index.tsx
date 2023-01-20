@@ -2,6 +2,7 @@ import { InputNumberChangeParams } from "primereact/inputnumber";
 import { createContext, FormEvent, useEffect, useState } from "react";
 import { IAppContext, IChildren, IResponse } from "../interfaces";
 import { api } from "../services";
+import { toast } from "react-toastify";
 
 export const AppContext = createContext({} as IAppContext);
 
@@ -12,6 +13,7 @@ export function AppProvider({ children }: IChildren) {
   const [result, setResult] = useState<IResponse>({} as IResponse);
   const [day, setDay] = useState<number | null | undefined>();
   const [valueSpecificDay, setValueSpecificDay] = useState<number>(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const data = {
@@ -23,16 +25,21 @@ export function AppProvider({ children }: IChildren) {
 
     data.days[0] &&
       api
-        .post("/", data)
+        .post("", data)
         .then((res) => {
+          setLoading(false);
           const result: number = Object.values(res.data)[0] as number;
           setValueSpecificDay(result);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          setLoading(false);
+          err.response.status === 500 && toast.error("Erro do servidor");
+        });
   }, [mdr, installments, amount, setValueSpecificDay, day]);
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
+    setLoading(true);
 
     const data = {
       amount: amount * 100,
@@ -41,9 +48,15 @@ export function AppProvider({ children }: IChildren) {
     };
 
     api
-      .post("/", data)
-      .then((res) => setResult(res.data))
-      .catch((err) => console.log(err));
+      .post("", data)
+      .then((res) => {
+        setLoading(false);
+        setResult(res.data);
+      })
+      .catch((err) => {
+        setLoading(false);
+        err.response.status === 500 && toast.error("Erro do servidor");
+      });
   }
 
   function getDay(e: InputNumberChangeParams) {
@@ -56,14 +69,24 @@ export function AppProvider({ children }: IChildren) {
       days: [e.value],
     };
 
+    console.log("valueSpecifcDay", valueSpecificDay);
+    console.log("data", data);
+
     data.days[0] &&
       api
-        .post("/", data)
+        .post("", data)
         .then((res) => {
+          console.log(res);
           const result: number = Object.values(res.data)[0] as number;
           setValueSpecificDay(result);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log("err", err);
+          console.log("data 2", data);
+          console.log("valueSpecifcDay2", valueSpecificDay);
+          // setLoading(false);
+          // err.response.status === 500 && toast.error("Erro do servidor");
+        });
   }
 
   return (
@@ -83,6 +106,7 @@ export function AppProvider({ children }: IChildren) {
         setValueSpecificDay,
         valueSpecificDay,
         getDay,
+        loading,
       }}
     >
       {children}

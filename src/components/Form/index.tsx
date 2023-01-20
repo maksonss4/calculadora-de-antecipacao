@@ -29,7 +29,7 @@ export function Form() {
           value={amount}
           onValueChange={(e) => setAmount(e.value as number)}
         />
-        <span className="span-info">Mínimo R$10,00</span>
+        <span className="span-info">Mín R$10,00 | Máx R$1.000.000,00</span>
       </div>
 
       <div>

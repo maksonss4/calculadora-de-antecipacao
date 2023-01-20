@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import "react-toastify/dist/ReactToastify.css";
 
 export default createGlobalStyle`
 :root{
@@ -9,6 +10,7 @@ export default createGlobalStyle`
     --blue-2: #5E87DB;
     --black-1: #585858;
     --black-2: #6E6E6E;
+    --green-1: #1CAC78;
 }
 
 *{
@@ -30,6 +32,6 @@ button{
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 1rem;
+    
 }
 `;

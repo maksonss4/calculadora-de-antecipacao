@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import { InputNumber } from "primereact/inputnumber";
 
-export const DashboardContainer = styled.div`
-  background-color: white;
+export const DivContainer = styled.div`
+  padding: 0 1rem;
   width: 100%;
+`;
+
+export const DashboardContainer = styled.div`
   max-width: 45rem;
+  width: 100%;
   position: relative;
   border: 2px solid var(--gray-2);
   border-radius: 5px;
